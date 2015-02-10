@@ -1,6 +1,6 @@
 This is a fork of VCF-Converter by KaiSmith. I made few changes and improved the documentation.
 
-##Goal:
+##
 This script solve the problem of the conversion of a vcf variants coordinates from one reference genome version to another.
 
 It relies on the output of Blast (http://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastSearch&PROG_DEF=blastn&BLAST_PROG_DEF=megaBlast&BLAST_SPEC=blast2seq), it works better with small sequences (ie. human mithochondrial dna).
