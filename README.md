@@ -15,9 +15,8 @@ If you'd like to use the script with larger files (Whole exome or genome), we re
 ```
 python blast_parser.py <blast file>
 python convert_vcf.py <blast file> <vcf file>
-
 ```
-	
+
 3- The new vcf should have the same name as the old one with .conv at the end
 
 ##Before use:
