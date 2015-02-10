@@ -1,13 +1,11 @@
-"""Used to convert a vcf from one reference to another
+"""This script convert a vcf file variants coordinates from one reference to another
 """
 import sys
-#Command should look like: python convert_vcf.py <blast file> <vcf file>
+#Command should look like: python refchange.py <blast file> <vcf file>
 
 # COORD_CHANGES for hg19 to rsrs
 COORD_CHANGES = {}
 
-#TODO: Add an opton to input a file with a list of bad loci
-BAD_LOCI = []
 
 def change_coord(pos, coord_map = COORD_CHANGES):
     change = 0
@@ -23,13 +21,14 @@ if __name__ == '__main__':
     s =  open(sys.argv[1]+'.shifts','rU')
     vcf= open(sys.argv[2],'rU')
     w =  open(sys.argv[2]+'.conv', 'w')
-    #Makes COORD_CHANGES
+    
+    # Makes COORD_CHANGES
     for line in s:
         line = line.strip().split('\t')
         COORD_CHANGES[int(line[0])]=int(line[1])
 
     d={}
-    # Parses the readable blast format
+    # Parse the readable blast format
     for line in c:
         line=line.strip().split('\t')
         d[int(line[0])]=[line[1],line[2],line[3]]
