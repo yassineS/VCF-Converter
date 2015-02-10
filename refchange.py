@@ -6,6 +6,8 @@ import sys
 # COORD_CHANGES for hg19 to rsrs
 COORD_CHANGES = {}
 
+# Define the bad loci here
+BAD_LOCI = []
 
 def change_coord(pos, coord_map = COORD_CHANGES):
     change = 0
